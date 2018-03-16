@@ -1,0 +1,69 @@
+<resources>
+    <string name="app_name">Marma</string>
+    <string name="detail">Details</string>
+    <string name="year">year</string>
+    <string name="month">month</string>
+    <string name="day">day</string>
+    <string name="hour">hour</string>
+    <string name="sum">Total</string>
+    <string name="ryal">SR</string>
+    <string name="Map">Map</string>
+    <string name="header">List Playground</string>
+
+    <string name="orders">List Orders</string>
+
+    <string name="detail_sign">Don’t have an account yet?</string>
+    <string name="signup">Signup Now.</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="name_client">client name</string>
+    <string name="date">date</string>
+    <string name="update_password">update password</string>
+    <string name="update">update</string>
+    <string name="logout">Log out</string>
+
+/////////////
+    <string name="name_ground">ground name</string>
+    <string name="time">time</string>
+    <string name="delegate_name">delegate name</string>
+    <string name="cost">cost</string>
+///////////////// Tabs
+    <string name="response">Responses</string>
+    <string name="playground">Playgrounds</string>
+    <string name="profile"> Profile</string>
+///////////////
+    <string name="hurry_up">hurry up to ensure your reservition now</string>
+    <string name="phone">phone</string>
+    <string name="photo">upload photo</string>
+    <string name="send">send</string>
+    <string name="responselist">List Orders</string>
+    <string name="profiledescreption">Hi there , I\'m using marmy App</string>
+    <string name="back">Back</string>
+    <string name="capacity">Capacity</string>
+    <string name="location">Location</string>
+    <string name="gallary">Gallary</string>
+    <string name="salary">Salary</string>
+    <string name="book">Book</string>
+    <string name="AlertOldDate">This Old Date</string>
+    <string name="AlertLog">PLZ Log IN First</string>
+    <string name="AlertchooseDate">You Should Choose Date First</string>
+
+
+
+    <string name="home1">"First screen in app to enter and see playgrounds and have your profile   "</string>
+    <string name="intro1">"Login Screen "</string>
+
+    <string name="home2">"Playground List to see all playgrounds and enter in the name to enter to detail "</string>
+    <string name="intro2"> Playground List</string>
+
+    <string name="home3">"This screen has all data about playground and you can register in it"</string>
+    <string name="intro3">Detail</string>
+
+    <string name="home4">"List Orders of grouns that you book it "</string>
+    <string name="intro4">"List Orders "</string>
+
+    <string name="home5">"This screen to see the address of playground "</string>
+    <string name="intro5">"map screen"</string>
+    <string name="app_intro_skip">Skip</string>
+
+
+</resources>

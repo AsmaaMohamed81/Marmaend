@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/back"
+    tools:context="com.Alatheer.marmy.UI.Register">
+
+    <ImageView
+        android:layout_marginTop="30dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo"/>
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:paddingRight="20dp"
+
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/edtusername"
+            android:layout_width="match_parent"
+            android:layout_marginRight="30dp"
+
+            android:layout_marginLeft="30dp"            android:layout_height="50dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp"
+            android:gravity="center"
+
+
+            android:background="@drawable/name"/>
+        <EditText
+            android:id="@+id/edtpass"
+            android:layout_width="match_parent"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_height="50dp"
+            android:inputType="textPassword"
+            android:paddingRight="20dp"
+            android:gravity="center"
+
+            android:paddingLeft="10dp"
+            android:background="@drawable/password"/>
+
+        <EditText
+            android:id="@+id/edtemail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/email1"
+            android:gravity="center"
+
+            android:inputType="textEmailAddress"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp" />
+        <EditText
+            android:id="@+id/edtphone"
+            android:layout_width="match_parent"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"            android:layout_height="50dp"
+            android:paddingRight="20dp"
+            android:gravity="center"
+
+            android:inputType="phone"
+            android:paddingLeft="10dp"
+            android:background="@drawable/phone"/>
+
+        <Button
+            android:id="@+id/btnregister"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/sign"/>
+
+
+    </LinearLayout>
+</LinearLayout>

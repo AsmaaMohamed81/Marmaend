@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<resources>
+
+
+    <string name="app_name">مرمى</string>
+    <string name="detail">التفاصيل</string>
+
+    <string name="year">السنة</string>
+    <string name="month">الشهر</string>
+    <string name="day">اليوم</string>
+    <string name="hour">الساعه</string>
+
+    <string name="sum">المجموع</string>
+    <string name="ryal">ريال</string>
+    <string name="Map">الخريطه</string>
+
+    <string name="header">قائمه الملاعب</string>
+
+    <string name="orders">قائمه الطلبات </string>
+
+    <string name="detail_sign">لايوجد لديك حساب ؟</string>
+    <string name="signup">انشاء حساب .</string>
+    <string name="name_client">اسم العميل</string>
+    <string name="name_ground">اسم الملعب</string>
+    <string name="time">الوقت</string>
+    <string name="date">التاريخ</string>
+    <string name="delegate_name">اسم المندوب</string>
+    <string name="cost">السعر</string>
+
+////////////Tabs
+    <string name="response">الردود</string>
+    <string name="playground">الملاعب</string>
+    <string name="profile">صفحتك</string>
+///////////////////
+    <string name="hurry_up">سارع بتاكيد الحجز لان لتحصل على ملعبك</string>
+
+
+    <string name="update_password">تعديل كلمة السر </string>
+    <string name="update">تعديل</string>
+    <string name="logout">خروج </string>
+    <string name="phone">التلفون</string>
+    <string name="photo">تحميل الصوره</string>
+    <string name="send">ارسال</string>
+    <string name="title_activity_maps">خريطه</string>
+    <string name="responselist">قائمه الردود</string>
+    <string name="profiledescreption">"اهلا بك  , انت في تطبيق الملاعب "</string>
+    <string name="back">رجوع</string>
+    <string name="capacity">سعة الملعب</string>
+    <string name="location">موقع الملعب</string>
+    <string name="gallary">صور الملعب</string>
+    <string name="salary">السعر</string>
+    <string name="book">احجز</string>
+    <string name="AlertOldDate">"لقد اخترت تاريخ قديم "</string>
+    <string name="AlertLog">"سجل دخول اولا  "</string>
+    <string name="AlertchooseDate">يجب اختيار التاريخ قبل الحجز</string>
+
+    <string name="app_intro_skip">تخطي</string>
+
+    <string name="home1">"تسجيل الدخول وذلك لترى كل الملاعب التى تريدها وتعديل ملفك الشخصى"</string>
+    <string name="intro1">تسجيل الدخول</string>
+
+    <string name="home2">"قائمه بكل الملاعب المتاحه يمكنك ان ترى اسم وصوره الملعب عند الضغط على الاسم تذهب الى صفحه التفاصيل "</string>
+    <string name="intro2">قائمة الملاعب</string>
+
+    <string name="home3">"هذه الصفحه تمتلك كل تفاصيل الملعب من صور لعنوان لمساحته كما يمكنك الحجز منها ايضا "</string>
+    <string name="intro3">صفحه التفاصيل</string>
+
+    <string name="home4">"قائمه الردود على حجزك وهذه تمتلك منها اسم وسعر الملعب الذى قمت بحجزه سابقا"</string>
+    <string name="intro4">قائمه الردود </string>
+
+    <string name="home5">"يمكنك من خلال الخريطه رؤيه موقع الملعب بالتحديد"</string>
+    <string name="intro5">الخريطه </string>
+
+</resources>
