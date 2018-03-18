@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:background="@drawable/tv_map_dilog"
+    android:text="ادخل عنوان الملعب"
+    android:textColor="@color/text"
+    android:textStyle="bold"
+    android:textSize="18sp"
+    android:gravity="center"
+    />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edtxt_bg_map_dialog"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="الدولة"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:textColorHint="@color/colorPrimary"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/edtxt_bg_map_dialog"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="الدولة"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:textColorHint="@color/colorPrimary"
+        />
+</LinearLayout>

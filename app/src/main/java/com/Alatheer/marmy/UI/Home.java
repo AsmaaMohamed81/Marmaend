@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.Alatheer.marmy.Fragments.FragmentADD;
 import com.Alatheer.marmy.Fragments.FragmentDelegatesOrders;
 import com.Alatheer.marmy.Fragments.FragmentListOrders;
 import com.Alatheer.marmy.Fragments.FragmentListPlayground;
@@ -51,11 +52,14 @@ public class Home extends AppCompatActivity {
             fragmentList.add(new FragmentDelegatesOrders());
             fragmentList.add(new FragmentListPlayground());
             fragmentList.add(new FragmentProfile());
+            fragmentList.add(new FragmentADD());
         }else {
             fragmentList = new ArrayList<>();
             fragmentList.add(new FragmentListOrders());
             fragmentList.add(new FragmentListPlayground());
             fragmentList.add(new FragmentProfile());
+            fragmentList.add(new FragmentADD());
+
         }
 
         final CoordinatorLayout coordinatorLayout =  findViewById(R.id.activity_main);

@@ -4,6 +4,8 @@
     <color name="colorPrimaryDark">#075567</color>
     <color name="colorAccent">#075567</color>
     <color name="sp">#000000</color>
+
+    <color name="colorPress">#0e94b3</color>
     <color name="text">#cdd118</color>
 
     <color name="white">#ffffff</color>

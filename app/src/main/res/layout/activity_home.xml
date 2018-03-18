@@ -15,7 +15,7 @@
         android:id="@+id/spaceTabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:number_of_tabs="three"
+        app:number_of_tabs="four"
         app:starting_position="two"
         app:tab_color="@color/colorPrimary"
         android:clipChildren="false"
@@ -26,10 +26,9 @@
         app:icon_one="@drawable/listorder"
         app:icon_two="@drawable/list"
         app:icon_three="@drawable/profile"
+        app:icon_four="@drawable/logo"
 
-        app:text_one="@string/response"
-        app:text_two="@string/playground"
-        app:text_three="@string/profile"
+
 
         />
 

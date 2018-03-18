@@ -72,5 +72,7 @@
 
     <string name="home5">"يمكنك من خلال الخريطه رؤيه موقع الملعب بالتحديد"</string>
     <string name="intro5">الخريطه </string>
+    <string name="search">ابحث عن ملعب</string>
+    <string name="offer">عـــــــرض</string>
 
 </resources>

@@ -5,9 +5,11 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.Alatheer.marmy.Model.Model;
 import com.Alatheer.marmy.API.Service.APIClient;
@@ -28,6 +30,8 @@ public class FragmentListPlayground extends Fragment {
     ArrayList<Model> Model;
     graundAdapter adapter;
     RecyclerView recyclerView;
+    private SearchView search_view;
+    private TextView ts;
     //String id;
 Home home;
     @Override
@@ -35,7 +39,58 @@ Home home;
 
         View view= inflater.inflate(R.layout.fragment_list_playground, container, false);
 
-home= (Home) getActivity();
+        search_view = view.findViewById(R.id.search_view);
+        ts = view.findViewById(R.id.ts);
+
+        search_view.setOnSearchClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ts.setVisibility(View.GONE);
+
+            }
+        });
+        search_view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                search_view.setIconified(false);
+                ts.setVisibility(View.GONE);
+            }
+        });
+
+        ts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                search_view.setIconified(false);
+                ts.setVisibility(View.GONE);
+
+            }
+        });
+        search_view.setOnCloseListener(new SearchView.OnCloseListener() {
+            @Override
+            public boolean onClose() {
+                ts.setVisibility(View.VISIBLE);
+
+                return false;
+            }
+        });
+
+        search_view.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                Search_playGround(query);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                if (newText.isEmpty())
+                {
+                    DisplayAllStadium();
+                }
+                return false;
+            }
+        });
+        home= (Home) getActivity();
 
        // Toast.makeText(home, ""+home.id, Toast.LENGTH_SHORT).show();
 
@@ -48,7 +103,7 @@ home= (Home) getActivity();
 
         Model=new ArrayList<>();
 
-        recyclerView.setLayoutManager(new GridLayoutManager(getContext(),3));
+        recyclerView.setLayoutManager(new GridLayoutManager(getContext(),1));
         recyclerView.setHasFixedSize(true);
 
         adapter=new graundAdapter(getContext(),Model);
@@ -59,6 +114,12 @@ home= (Home) getActivity();
             Log.e("sssss",id);
 
         }*/
+       DisplayAllStadium();
+        return view;
+    }
+
+    private void DisplayAllStadium()
+    {
         Services service = APIClient.getClient().create(Services.class);
         Call<List<Model>> call = service.getgroundData();
 
@@ -66,20 +127,45 @@ home= (Home) getActivity();
             @Override
             public void onResponse(Call<List<Model>> call, Response<List<Model>> response) {
 
+                Model.clear();
+
                 Model.addAll(response.body());
                 adapter.notifyDataSetChanged();
-              //  Toast.makeText(getContext(), ""+home.id, Toast.LENGTH_SHORT).show();
+                //  Toast.makeText(getContext(), ""+home.id, Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onFailure(Call<List<Model>> call, Throwable t) {
 
-             //   Toast.makeText(getActivity(), ""+t.getMessage(), Toast.LENGTH_SHORT).show();
+                //   Toast.makeText(getActivity(), ""+t.getMessage(), Toast.LENGTH_SHORT).show();
 
             }
         });
 
-        return view;
+    }
+
+    private void Search_playGround(String query) {
+        Services service = APIClient.getClient().create(Services.class);
+        Call<List<Model>> call = service.searchplayground(query);
+
+        call.enqueue(new Callback<List<Model>>() {
+            @Override
+            public void onResponse(Call<List<Model>> call, Response<List<Model>> response) {
+
+                Model.clear();
+
+                Model.addAll(response.body());
+                adapter.notifyDataSetChanged();
+                //  Toast.makeText(getContext(), ""+home.id, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onFailure(Call<List<Model>> call, Throwable t) {
+
+                //   Toast.makeText(getActivity(), ""+t.getMessage(), Toast.LENGTH_SHORT).show();
+
+            }
+        });
     }
 
 

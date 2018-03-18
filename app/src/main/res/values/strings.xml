@@ -21,16 +21,16 @@
     <string name="update">update</string>
     <string name="logout">Log out</string>
 
-/////////////
+    /////////////
     <string name="name_ground">ground name</string>
     <string name="time">time</string>
     <string name="delegate_name">delegate name</string>
     <string name="cost">cost</string>
-///////////////// Tabs
+    ///////////////// Tabs
     <string name="response">Responses</string>
     <string name="playground">Playgrounds</string>
     <string name="profile"> Profile</string>
-///////////////
+    ///////////////
     <string name="hurry_up">hurry up to ensure your reservition now</string>
     <string name="phone">phone</string>
     <string name="photo">upload photo</string>
@@ -48,7 +48,6 @@
     <string name="AlertchooseDate">You Should Choose Date First</string>
 
 
-
     <string name="home1">"First screen in app to enter and see playgrounds and have your profile   "</string>
     <string name="intro1">"Login Screen "</string>
 
@@ -64,6 +63,18 @@
     <string name="home5">"This screen to see the address of playground "</string>
     <string name="intro5">"map screen"</string>
     <string name="app_intro_skip">Skip</string>
+
+
+    <string name="addprofile">اضافه صوره شخصيه</string>
+    <string name="addcard">اضافه صوره الرخصه</string>
+    <string name="whyadd">سبب الانضمام</string>
+    <string name="endam">انضم الينا</string>
+    <string name="addmandop">اضافه مندوب</string>
+    <string name="addmal3abk">اضف ملعبك</string>
+    <string name="chooseimge">you should choose Image Forst</string>
+    <string name="address">Add Address</string>
+    <string name="search">ابحث عن ملعب</string>
+    <string name="offer">عـــــــرض</string>
 
 
 </resources>

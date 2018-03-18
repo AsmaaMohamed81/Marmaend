@@ -4,6 +4,7 @@ package com.Alatheer.marmy.API.Service;
 import com.Alatheer.marmy.Model.AllDelegateModel;
 import com.Alatheer.marmy.Model.ClientOrderModel;
 import com.Alatheer.marmy.Model.DelegateOrder;
+import com.Alatheer.marmy.Model.MessageResponse;
 import com.Alatheer.marmy.Model.Model;
 import com.Alatheer.marmy.Model.MSG;
 import com.Alatheer.marmy.Model.ResponseModel;
@@ -48,6 +49,29 @@ public interface Services {
     @POST("Login")
     Call<MSG> userLogIn(@Field("user_name") String user_name,
                         @Field("password") String password);
+    @FormUrlEncoded
+    @POST("AddNewPlayground")
+    Call<MessageResponse>  addplayground(@Field("playground_name") String name,
+                                         @Field("playground_cost") String cost,
+                                         @Field("playground_capacity") String capacity,
+                                         @Field("playground_address")String address,
+                                         @Field("playground_google_lng") String lng,
+                                         @Field("playground_google_lat") String lat,
+                                         @Field("user_id_fk") String user_id,
+                                         @Field("playground_images[]") List<String> imageList
+    );
+
+    @FormUrlEncoded
+    @POST("SearchPlayground")
+
+    Call<List<Model>>  searchplayground (@Field("search_playground_name") String nameground);
+
+    @FormUrlEncoded
+    @POST("OrdersBeDelegate")
+    Call<MessageResponse> mandopRequest (@Field("user_id_fk") String id,
+                                         @Field("person_image") String imgprofile,
+                                         @Field("person_license") String imgcard,
+                                         @Field("person_reson") String seson);
 
 
     @FormUrlEncoded

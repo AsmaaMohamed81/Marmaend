@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+
+    android:layout_width="match_parent" >
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.Alatheer.marmy.UI.AddPlayGroundActivity">
+
+
+    <ImageView
+        android:layout_marginTop="5dp"
+        android:layout_gravity="right"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/logo"/>
+
+    <LinearLayout
+        android:layout_margin="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+        android:background="@drawable/btn7"
+                android:orientation="vertical">
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:id="@+id/images"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:padding="5dp"
+
+            android:src="@drawable/image"
+            android:background="@color/text"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            />
+
+        <EditText
+            android:id="@+id/name_ground"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:layout_width="300dp"
+            android:hint="@string/name_ground"
+            android:textColorHint="@color/colorPrimary"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:background="@color/text"
+            android:maxLines="1"
+            />
+
+        <EditText
+            android:id="@+id/cost"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:layout_width="300dp"
+            android:hint="@string/cost"
+            android:textColorHint="@color/colorPrimary"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:background="@color/text"
+            android:maxLines="1"
+
+            />
+        <EditText
+            android:id="@+id/capicity"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:layout_width="300dp"
+            android:hint="@string/capacity"
+            android:textColorHint="@color/colorPrimary"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:background="@color/text"
+            android:maxLines="1"
+
+            />
+        <EditText
+            android:id="@+id/adress"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:layout_width="300dp"
+            android:hint="@string/address"
+            android:textColorHint="@color/colorPrimary"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:background="@color/text"
+            android:maxLines="1"
+
+            />
+
+
+        <Gallery
+            android:layout_marginTop="10dp"
+            android:id="@+id/simpleGallery"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:unselectedAlpha="50" />
+
+        </LinearLayout>
+
+    <Button
+        android:id="@+id/addmal3aab"
+        android:layout_width="wrap_content"
+        android:text="@string/addmal3abk"
+        android:layout_gravity="center"
+        android:background="@color/text"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>
+</ScrollView>

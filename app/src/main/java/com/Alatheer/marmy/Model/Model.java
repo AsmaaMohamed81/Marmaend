@@ -49,6 +49,37 @@ public class Model{
 	@SerializedName("playground_capacity")
 	private String playgroundCapacity;
 
+	public Model(String playgroundCost, String playgroundInfo, Double playgroundGoogleLat, String userIdFk, String playgroundGovernorateIdFk, String playgroundCityIdFk, String imageName, String playgroundEvaluate, String dateS, String playgroundName, Double playgroundGoogleLng, String playgroundIdPk, String playgroundAddress, String playgroundDescrip, String playgroundCapacity, String playgroundoffer) {
+		this.playgroundCost = playgroundCost;
+		this.playgroundInfo = playgroundInfo;
+		this.playgroundGoogleLat = playgroundGoogleLat;
+		this.userIdFk = userIdFk;
+		this.playgroundGovernorateIdFk = playgroundGovernorateIdFk;
+		this.playgroundCityIdFk = playgroundCityIdFk;
+		this.imageName = imageName;
+		this.playgroundEvaluate = playgroundEvaluate;
+		this.dateS = dateS;
+		this.playgroundName = playgroundName;
+		this.playgroundGoogleLng = playgroundGoogleLng;
+		this.playgroundIdPk = playgroundIdPk;
+		this.playgroundAddress = playgroundAddress;
+		this.playgroundDescrip = playgroundDescrip;
+		this.playgroundCapacity = playgroundCapacity;
+		this.playgroundoffer = playgroundoffer;
+	}
+
+	public void setPlaygroundoffer(String playgroundoffer) {
+		this.playgroundoffer = playgroundoffer;
+	}
+
+	public String getPlaygroundoffer() {
+
+		return playgroundoffer;
+	}
+
+	@SerializedName("playground_offer")
+	private String playgroundoffer;
+
 	public String getPlaygroundCost(){
 		return playgroundCost;
 	}
