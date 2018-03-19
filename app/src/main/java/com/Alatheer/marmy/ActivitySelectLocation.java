@@ -112,7 +112,7 @@ public class ActivitySelectLocation extends AppCompatActivity implements OnMapRe
     private void getLocation(String loc) {
         Geocoder geocoder = new Geocoder(this);
         try {
-            List<Address> addressList = geocoder.getFromLocationName(loc,1);
+            List<Address> addressList = geocoder.getFromLocationName(loc,5);
             Address address = addressList.get(0);
             if (addressList.size()>0)
             {
@@ -200,12 +200,15 @@ public class ActivitySelectLocation extends AppCompatActivity implements OnMapRe
             {
 
                 Location location = manager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
+                Log.e("loooo","  "+location.getLongitude());
                 if (location!=null)
                 {
 
 
                     double  lat = location.getLatitude();
                     double  lng =location.getLongitude();
+
+                    Log.e("location",""+lat+","+lng);
                     Geocoder geocoder = new Geocoder(ActivitySelectLocation.this);
                     try {
                         List<Address> addressList = geocoder.getFromLocation(lat,lng,1);

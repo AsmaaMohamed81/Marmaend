@@ -41,7 +41,7 @@
     <string name="capacity">Capacity</string>
     <string name="location">Location</string>
     <string name="gallary">Gallary</string>
-    <string name="salary">Salary</string>
+    <string name="salary">Cost</string>
     <string name="book">Book</string>
     <string name="AlertOldDate">This Old Date</string>
     <string name="AlertLog">PLZ Log IN First</string>
@@ -65,16 +65,19 @@
     <string name="app_intro_skip">Skip</string>
 
 
-    <string name="addprofile">اضافه صوره شخصيه</string>
-    <string name="addcard">اضافه صوره الرخصه</string>
-    <string name="whyadd">سبب الانضمام</string>
-    <string name="endam">انضم الينا</string>
-    <string name="addmandop">اضافه مندوب</string>
-    <string name="addmal3abk">اضف ملعبك</string>
-    <string name="chooseimge">you should choose Image Forst</string>
+    <string name="addprofile">Add photo</string>
+    <string name="addcard">Add license photo</string>
+    <string name="whyadd">Reason for join us</string>
+    <string name="endam">Join us</string>
+    <string name="addmandop">Request delegate</string>
+    <string name="addmal3abk">Add playground</string>
+    <string name="chooseimge">you should choose Image First</string>
     <string name="address">Add Address</string>
-    <string name="search">ابحث عن ملعب</string>
-    <string name="offer">عـــــــرض</string>
+    <string name="search">Search For Name Playground</string>
+    <string name="offer">Offer</string>
+    <string name="album">Gallery</string>
+    <string name="addLocation">Add Detail Address </string>
+    <string name="searchbtn">Search</string>
 
 
 </resources>

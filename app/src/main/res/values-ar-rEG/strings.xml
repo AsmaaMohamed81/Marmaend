@@ -72,7 +72,21 @@
 
     <string name="home5">"يمكنك من خلال الخريطه رؤيه موقع الملعب بالتحديد"</string>
     <string name="intro5">الخريطه </string>
-    <string name="search">ابحث عن ملعب</string>
+    <string name="search">ابحث  باسم الملعب</string>
     <string name="offer">عـــــــرض</string>
+
+
+    <string name="addprofile">اضافه صوره شخصيه</string>
+    <string name="addcard">اضافه صوره الرخصه</string>
+    <string name="whyadd">سبب الانضمام</string>
+    <string name="endam">انضم الينا</string>
+    <string name="addmandop">اضافه مندوب</string>
+    <string name="addmal3abk">اضف ملعبك</string>
+    <string name="chooseimge">يجب عليك اختيار الصور الاول </string>
+    <string name="address">اضافه العنوان</string>
+    <string name="album">الالبوم</string>
+    <string name="addLocation">ادخل العنوان بالتفصيل</string>
+    <string name="searchbtn">ابحث</string>
+
 
 </resources>

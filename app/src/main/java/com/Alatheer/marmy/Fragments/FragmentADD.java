@@ -24,6 +24,7 @@ public class FragmentADD extends Fragment {
 
     String id;
     Button addmandop,addmal3ab;
+
     Home home;
     @Nullable
     @Override

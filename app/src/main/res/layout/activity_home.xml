@@ -26,7 +26,7 @@
         app:icon_one="@drawable/listorder"
         app:icon_two="@drawable/list"
         app:icon_three="@drawable/profile"
-        app:icon_four="@drawable/logo"
+        app:icon_four="@drawable/sett"
 
 
 

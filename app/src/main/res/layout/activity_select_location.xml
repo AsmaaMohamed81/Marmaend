@@ -35,7 +35,7 @@
            android:layout_width="wrap_content"
            android:layout_height="match_parent"
            android:layout_toLeftOf="@+id/searchBtn"
-           android:hint="ادخل العنوان بالتفصيل"
+           android:hint="@string/addLocation"
            android:textSize="13sp"
            android:textColor="#000"
            android:paddingLeft="5dp"
@@ -51,7 +51,7 @@
            android:layout_centerVertical="true"
            android:layout_alignParentRight="true"
            android:background="@drawable/dialog_btn_map"
-           android:text="ابحث"
+           android:text="@string/searchbtn"
            android:textColor="@color/colorPrimary"
            />
    </RelativeLayout>
