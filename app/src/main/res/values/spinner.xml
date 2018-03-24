@@ -1,10 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="planets_array">
-        <item>6-8</item>
-        <item>8-10</item>
-        <item>10-12</item>
+    <item>6-8</item>
+    <item>8-10</item>
+    <item>10-12</item>
+
+
+</string-array>
+
+    <string-array name="capcity_array">
+        <item>6*6</item>
+        <item>7*7</item>
+        <item>8*8</item>
+        <item>9*9</item>
+        <item>10*10</item>
+        <item>11*11</item>
 
 
     </string-array>
+
+    <string-array name="user_array">
+        <item>@string/golden_member</item>
+        <item>@string/platinum_member</item>
+
+
+    </string-array>
+
 </resources>

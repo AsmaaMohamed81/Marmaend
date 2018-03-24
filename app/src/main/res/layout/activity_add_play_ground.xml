@@ -27,6 +27,7 @@
         android:src="@drawable/logo"/>
 
     <LinearLayout
+        android:padding="10dp"
         android:layout_margin="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -63,6 +64,7 @@
             android:layout_marginTop="20dp"
             android:layout_gravity="center"
             android:layout_width="300dp"
+            android:inputType="number"
             android:hint="@string/cost"
             android:textColorHint="@color/colorPrimary"
             android:layout_height="50dp"
@@ -71,25 +73,55 @@
             android:maxLines="1"
 
             />
-        <EditText
-            android:id="@+id/capicity"
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center"
-            android:layout_width="300dp"
-            android:hint="@string/capacity"
-            android:textColorHint="@color/colorPrimary"
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
             android:layout_height="50dp"
             android:padding="10dp"
+            android:layout_marginTop="20dp"
             android:background="@color/text"
-            android:maxLines="1"
+
 
             />
+
+
+        <!--<EditText-->
+            <!--android:id="@+id/capicity"-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_width="300dp"-->
+            <!--android:hint="@string/capacity"-->
+            <!--android:textColorHint="@color/colorPrimary"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:padding="10dp"-->
+            <!--android:background="@color/text"-->
+            <!--android:maxLines="1"-->
+
+            <!--/>-->
         <EditText
-            android:id="@+id/adress"
+        android:id="@+id/adress"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:layout_width="300dp"
+        android:hint="@string/address"
+        android:textColorHint="@color/colorPrimary"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:background="@color/text"
+        android:maxLines="1"
+
+        />
+
+        <EditText
+            android:id="@+id/phone"
             android:layout_marginTop="20dp"
             android:layout_gravity="center"
             android:layout_width="300dp"
-            android:hint="@string/address"
+            android:inputType="number"
+            android:hint="@string/phone"
             android:textColorHint="@color/colorPrimary"
             android:layout_height="50dp"
             android:padding="10dp"
@@ -115,7 +147,8 @@
         android:text="@string/addmal3abk"
         android:layout_gravity="center"
         android:background="@color/text"
-        android:layout_marginBottom="10dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginBottom="20dp"
         android:layout_height="wrap_content" />
 
 

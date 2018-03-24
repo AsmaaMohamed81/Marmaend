@@ -79,5 +79,8 @@
     <string name="addLocation">Add Detail Address </string>
     <string name="searchbtn">Search</string>
 
+    <string name="golden_member">golden member</string>
+    <string name="platinum_member">platinum member</string>
+
 
 </resources>

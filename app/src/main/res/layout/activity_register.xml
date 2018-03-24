@@ -4,48 +4,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
     android:background="@drawable/back"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context="com.Alatheer.marmy.UI.Register">
 
     <ImageView
-        android:layout_marginTop="30dp"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@drawable/logo"/>
+        android:layout_marginTop="30dp"
+        android:src="@drawable/logo" />
+
     <LinearLayout
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:paddingRight="20dp"
+        android:orientation="vertical"
 
-        android:orientation="vertical">
+        android:paddingRight="20dp">
+
         <EditText
             android:id="@+id/edtusername"
             android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-
-            android:layout_marginLeft="30dp"            android:layout_height="50dp"
-            android:paddingLeft="10dp"
-            android:paddingRight="20dp"
+            android:background="@drawable/name"
             android:gravity="center"
+            android:paddingLeft="10dp"
 
 
-            android:background="@drawable/name"/>
+            android:paddingRight="20dp" />
+
         <EditText
             android:id="@+id/edtpass"
             android:layout_width="match_parent"
-            android:layout_marginRight="30dp"
-            android:layout_marginLeft="30dp"
             android:layout_height="50dp"
-            android:inputType="textPassword"
-            android:paddingRight="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/password"
             android:gravity="center"
+            android:inputType="textPassword"
 
             android:paddingLeft="10dp"
-            android:background="@drawable/password"/>
+            android:paddingRight="20dp" />
 
         <EditText
             android:id="@+id/edtemail"
@@ -60,24 +64,37 @@
             android:inputType="textEmailAddress"
             android:paddingLeft="10dp"
             android:paddingRight="20dp" />
+
         <EditText
             android:id="@+id/edtphone"
             android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-            android:layout_marginLeft="30dp"            android:layout_height="50dp"
-            android:paddingRight="20dp"
+            android:background="@drawable/phone"
             android:gravity="center"
 
             android:inputType="phone"
             android:paddingLeft="10dp"
-            android:background="@drawable/phone"/>
+            android:paddingRight="20dp" />
+
+        <Spinner
+            android:id="@+id/spinner_rigister"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/btn8"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp"></Spinner>
 
         <Button
             android:id="@+id/btnregister"
             android:layout_width="200dp"
             android:layout_height="50dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/sign"/>
+            android:background="@drawable/sign" />
 
 
     </LinearLayout>

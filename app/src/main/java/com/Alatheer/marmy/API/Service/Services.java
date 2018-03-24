@@ -41,7 +41,8 @@ public interface Services {
                          @Field("email") String email,
                          @Field("password") String password,
                          @Field("mobile") String mobile,
-                         @Field("token_id") String token_id);
+                         @Field("token_id") String token_id,
+                         @Field("id_member") String member_id);
 
 
 
@@ -58,7 +59,8 @@ public interface Services {
                                          @Field("playground_google_lng") String lng,
                                          @Field("playground_google_lat") String lat,
                                          @Field("user_id_fk") String user_id,
-                                         @Field("playground_images[]") List<String> imageList
+                                         @Field("playground_images[]") List<String> imageList,
+                                         @Field("playground_phone") String phone
     );
 
     @FormUrlEncoded

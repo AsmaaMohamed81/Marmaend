@@ -6,8 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.Alatheer.marmy.API.Service.Services;
@@ -27,7 +30,10 @@ public class Register extends AppCompatActivity {
     private static final String TAG = "SignupActivity";
     EditText username,password ,phone, email;
     Button register;
+    Spinner spinner;
     private ProgressDialog pDialog;
+    String supplier, item ;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +46,8 @@ public class Register extends AppCompatActivity {
         email=findViewById(R.id.edtemail);
         phone=findViewById(R.id.edtphone);
         register=findViewById(R.id.btnregister);
+        spinner=findViewById(R.id.spinner_rigister);
+
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,6 +63,38 @@ public class Register extends AppCompatActivity {
                 signup();
 
                // sendNetworkRequest(user);
+            }
+        });
+
+
+        ArrayAdapter<CharSequence> arrayAdapter = ArrayAdapter.createFromResource(this,R.array.user_array
+        ,R.layout.sipnneritem2);
+        arrayAdapter.setDropDownViewResource(R.layout.sppinnersheck);
+        spinner.setAdapter(arrayAdapter);
+        spinner.setSelection(0);
+
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                supplier=spinner.getSelectedItem().toString();
+
+                if(supplier.equals(getString(R.string.platinum_member))){
+                    item="1";
+
+                }else {
+
+                    item="2";
+
+
+                }
+                Log.e("Selected item : ", item);
+
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
             }
         });
 
@@ -144,7 +184,7 @@ public class Register extends AppCompatActivity {
         Services service = APIClient.getClient().create(Services.class);
 
 
-        Call<MSG> userCall = service.userSignUp(name, uemail,pass, mobile, FirebaseInstanceId.getInstance().getToken());
+        Call<MSG> userCall = service.userSignUp(name, uemail,pass, mobile, FirebaseInstanceId.getInstance().getToken(),item);
        // startActivity(new Intent(Register.this, Home.class));
 
         userCall.enqueue(new Callback<MSG>() {

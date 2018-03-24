@@ -12,7 +12,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 
 public class APIClient {
-    public static final String BASE_URL = "http://clup.alatheertech.com/Api/";
+    public static final String BASE_URL = "http://marma.co/Api/";
     private static Retrofit retrofit = null;
 
 

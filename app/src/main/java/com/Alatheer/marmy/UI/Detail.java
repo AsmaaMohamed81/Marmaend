@@ -45,8 +45,9 @@ public class Detail extends AppCompatActivity {
 
     final ArrayList seletedItems = new ArrayList();
     Spinner spinner;
-    TextView name, address, capicty, cost,dateall, map,total,back;
-    ImageView img, imgs;
+    TextView name, address, capicty, cost,dateall,total,back;
+    ImageView img , map;
+    TextView imgs;
     TextView book;
     ArrayList<AllDelegateModel> delegate;
     Double latitude, longitude;

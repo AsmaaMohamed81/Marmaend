@@ -135,7 +135,7 @@ public class Loogin extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                loginByServer();
+                log_in();
 
             }
         });
@@ -151,7 +151,6 @@ public class Loogin extends AppCompatActivity {
         showpDialog();
         final String user = username.getText().toString();
         String pass = password.getText().toString();
-
         Services service = APIClient.getClient().create(Services.class);
 
         Call<MSG> userCall = service.userLogIn(user,pass);
@@ -164,48 +163,58 @@ public class Loogin extends AppCompatActivity {
 
                 if (response.isSuccessful()) {
 
+                    if (response.body().getSuccess()==1)
+                    {
 
-                    items = new String[users.size()];
-                    id = response.body().getId();
 
-                    if (response.body().getIs_delegate() == 1) {
-                      //  Toast.makeText(Loogin.this, ""+FirebaseInstanceId.getInstance().getToken(), Toast.LENGTH_SHORT).show();
+                        items = new String[users.size()];
+                        id = response.body().getId();
+
+                        if (response.body().getIs_delegate() == 1) {
+                            //  Toast.makeText(Loogin.this, ""+FirebaseInstanceId.getInstance().getToken(), Toast.LENGTH_SHORT).show();
 //                        Log.e("mm",FirebaseInstanceId.getInstance().getToken());
-                        Preferense pref = new Preferense(Loogin.this);
-                        pref.CreateSharedPref(id,"1");
-                        Intent intent = new Intent(Loogin.this, Home.class);
-                        intent.putExtra("user_id", id);
-                        intent.putExtra("isdelegate","1");
-                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                        startActivity(intent);
-                        finish();
-                    //    Toast.makeText(Loogin.this, "" + response.body().getId(), Toast.LENGTH_SHORT).show();
+                            Preferense pref = new Preferense(Loogin.this);
+                            pref.CreateSharedPref(id,"1");
+                            Intent intent = new Intent(Loogin.this, Home.class);
+                            intent.putExtra("user_id", id);
+                            intent.putExtra("isdelegate","1");
+                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                            startActivity(intent);
+                            finish();
+                            //    Toast.makeText(Loogin.this, "" + response.body().getId(), Toast.LENGTH_SHORT).show();
 
-                    }else {
-                       // Toast.makeText(Loogin.this, ""+FirebaseInstanceId.getInstance().getToken(), Toast.LENGTH_SHORT).show();
-                        Preferense pref = new Preferense(Loogin.this);
-                        pref.CreateSharedPref(id,"0");
-                        Intent intent = new Intent(Loogin.this, Home.class);
-                        intent.putExtra("user_id", id);
-                        intent.putExtra("isdelegate","0");
-                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                        startActivity(intent);
-                        finish();
-                       // Toast.makeText(Loogin.this, "" + response.body().getId(), Toast.LENGTH_SHORT).show();
+                        }else {
+                            // Toast.makeText(Loogin.this, ""+FirebaseInstanceId.getInstance().getToken(), Toast.LENGTH_SHORT).show();
+                            Preferense pref = new Preferense(Loogin.this);
+                            pref.CreateSharedPref(id,"0");
+                            Intent intent = new Intent(Loogin.this, Home.class);
+                            intent.putExtra("user_id", id);
+                            intent.putExtra("isdelegate","0");
+                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                            startActivity(intent);
+                            finish();
+                            // Toast.makeText(Loogin.this, "" + response.body().getId(), Toast.LENGTH_SHORT).show();
 
-                }
+                        }
+                    }else
+                    {
+                        Toast.makeText(Loogin.this, "login failed", Toast.LENGTH_SHORT).show();
+                    }
+
                     // finish();
                 } else {
-                Toast.makeText(Loogin.this, "failed" , Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Loogin.this, "failed" , Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(Call<MSG> call, Throwable t) {
                 hidepDialog();
-               // Log.d("onFailure", t.toString());
+                // Log.d("onFailure", t.toString());
             }
         });
+
+
     }
 
     private void showpDialog() {
@@ -230,15 +239,52 @@ public class Loogin extends AppCompatActivity {
 //        }
     }
 
+
+    public void log_in() {
+
+        if (validate() == false) {
+            onLoginFailed();
+            return;
+        }
+
+        loginByServer();
+
+    }
+
+
     public void onLoginSuccess() {
         login.setEnabled(true);
+        setResult(RESULT_OK, null);
         finish();
     }
 
     public void onLoginFailed() {
-     //   Toast.makeText(getBaseContext(), "Login failed", Toast.LENGTH_LONG).show();
+        Toast.makeText(getBaseContext(), "Login failed", Toast.LENGTH_LONG).show();
 
         login.setEnabled(true);
+    }
+
+    public boolean validate() {
+        boolean valid = true;
+
+        String name = username.getText().toString();
+        String pass = password.getText().toString();
+
+        if (name.isEmpty() || name.length() < 3) {
+            username.setError("at least 3 characters");
+            valid = false;
+        } else {
+            username.setError(null);
+        }
+
+        if (pass.isEmpty() || pass.length() < 4 || pass.length() > 10) {
+            password.setError("between 4 and 10 alphanumeric characters");
+            valid = false;
+        } else {
+            password.setError(null);
+        }
+
+        return valid;
     }
 
     @Override

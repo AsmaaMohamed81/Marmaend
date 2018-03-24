@@ -40,7 +40,7 @@
     <string name="update_password">تعديل كلمة السر </string>
     <string name="update">تعديل</string>
     <string name="logout">خروج </string>
-    <string name="phone">التلفون</string>
+    <string name="phone">رقم الهاتف</string>
     <string name="photo">تحميل الصوره</string>
     <string name="send">ارسال</string>
     <string name="title_activity_maps">خريطه</string>
@@ -80,13 +80,16 @@
     <string name="addcard">اضافه صوره الرخصه</string>
     <string name="whyadd">سبب الانضمام</string>
     <string name="endam">انضم الينا</string>
-    <string name="addmandop">اضافه مندوب</string>
+    <string name="addmandop">طلب مندوب</string>
     <string name="addmal3abk">اضف ملعبك</string>
     <string name="chooseimge">يجب عليك اختيار الصور الاول </string>
     <string name="address">اضافه العنوان</string>
     <string name="album">الالبوم</string>
     <string name="addLocation">ادخل العنوان بالتفصيل</string>
     <string name="searchbtn">ابحث</string>
+
+    <string name="golden_member">عضو ذهبي</string>
+    <string name="platinum_member">عضو فضي</string>
 
 
 </resources>
