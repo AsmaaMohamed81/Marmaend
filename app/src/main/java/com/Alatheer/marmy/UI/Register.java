@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -122,7 +123,7 @@ public class Register extends AppCompatActivity {
     }
 
     public void onSignupFailed() {
-        Toast.makeText(getBaseContext(), "Login failed", Toast.LENGTH_LONG).show();
+        Toast.makeText(getBaseContext(), " please complete data", Toast.LENGTH_LONG).show();
 
         register.setEnabled(true);
     }
@@ -138,27 +139,20 @@ public class Register extends AppCompatActivity {
         if (name.isEmpty() || name.length() < 3) {
             username.setError("at least 3 characters");
             valid = false;
-        } else {
+        }else {
             username.setError(null);
         }
-
-
-        if (uemail.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(uemail).matches()) {
-            email.setError("enter a valid email address");
-            valid = false;
-        } else {
-            email.setError(null);
-        }
-
-
-        if (pass.isEmpty() || pass.length() < 4 || pass.length() > 10) {
+       if (pass.isEmpty() || pass.length() < 4 || pass.length() > 10) {
             password.setError("between 4 and 10 alphanumeric characters");
             valid = false;
-        } else {
-            password.setError(null);
-        }
-
-        if (mobile.isEmpty() || mobile.length() < 8 || mobile.length() > 13) {
+        }else {
+           password.setError(null);
+       } if (uemail.isEmpty() || !Patterns.EMAIL_ADDRESS.matcher(uemail).matches()) {
+            email.setError("enter a valid email address");
+            valid = false;
+        }  else {
+            email.setError(null);
+        }if (mobile.isEmpty() ||!Patterns.PHONE.matcher(mobile).matches()|| mobile.length()<8) {
             phone.setError("phone Do not match");
             valid = false;
         } else {
