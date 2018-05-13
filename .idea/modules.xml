@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Marma.iml" filepath="$PROJECT_DIR$/.idea/Marma.iml" />
-      <module fileurl="file://E:\Marma\Marma.iml" filepath="E:\Marma\Marma.iml" />
-      <module fileurl="file://C:\Users\moham\Desktop\Marmyy-master\Marmyy.iml" filepath="C:\Users\moham\Desktop\Marmyy-master\Marmyy.iml" />
-      <module fileurl="file://E:\android\projects\Marmyy\.idea\Marmyy.iml" filepath="E:\android\projects\Marmyy\.idea\Marmyy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Marma.iml" filepath="$PROJECT_DIR$/Marma.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

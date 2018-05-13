@@ -20,9 +20,7 @@ public class Preferense {
         SharedPreferences.Editor editor = pref.edit();
         editor.putString("user_id", id);
         editor.putString("isdelegate", del);
-
         editor.apply();
-
     }
 
     public void clear() {
