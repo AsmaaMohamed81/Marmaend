@@ -200,7 +200,7 @@ public class ActivitySelectLocation extends AppCompatActivity implements OnMapRe
             {
 
                 Location location = manager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
-                Log.e("loooo","  "+location.getLongitude());
+                //Log.e("loooo","  "+location.getLongitude());
                 if (location!=null)
                 {
 

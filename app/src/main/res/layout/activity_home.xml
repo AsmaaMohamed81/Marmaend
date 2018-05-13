@@ -18,17 +18,11 @@
         app:number_of_tabs="four"
         app:starting_position="two"
         app:tab_color="@color/colorPrimary"
-        android:clipChildren="false"
-        android:clipToPadding="false"
         app:button_color="#b3378b81"
-        app:layout_anchorGravity="center_vertical"
-        android:layerType="software"
         app:icon_one="@drawable/listorder"
         app:icon_two="@drawable/list"
         app:icon_three="@drawable/profile"
         app:icon_four="@drawable/sett"
-
-
 
         />
 

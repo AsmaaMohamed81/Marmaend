@@ -142,13 +142,16 @@
         </LinearLayout>
 
     <Button
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+
         android:id="@+id/addmal3aab"
         android:layout_width="wrap_content"
         android:text="@string/addmal3abk"
         android:layout_gravity="center"
-        android:background="@color/text"
+        android:background="@drawable/btntext"
         android:textColor="@color/colorPrimary"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="25dp"
         android:layout_height="wrap_content" />
 
 

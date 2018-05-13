@@ -395,14 +395,14 @@ public class AddPlayGroundActivity extends AppCompatActivity implements View.OnC
                     for (int i = 0; i <= 4; i++) {
                         selectedImage.add(uriList.get(i));
                     }
-                    Toast.makeText(this, "size1" + selectedImage.size(), Toast.LENGTH_SHORT).show();
+                   // Toast.makeText(this, "size1" + selectedImage.size(), Toast.LENGTH_SHORT).show();
 
                     UpdateUI(selectedImage);
                 } else {
 
                     selectedImage = uriList;
                     UpdateUI(selectedImage);
-                    Toast.makeText(this, "size2" + selectedImage.size(), Toast.LENGTH_SHORT).show();
+                  //  Toast.makeText(this, "size2" + selectedImage.size(), Toast.LENGTH_SHORT).show();
 
 
                 }
@@ -528,6 +528,7 @@ public class AddPlayGroundActivity extends AppCompatActivity implements View.OnC
                     if (response.body().getSuccess() == 1) {
                         Toast.makeText(AddPlayGroundActivity.this, "add playground successfully", Toast.LENGTH_SHORT).show();
                         dialog.dismiss();
+                        finish();
                     } else {
                         Toast.makeText(AddPlayGroundActivity.this, "add playground failed", Toast.LENGTH_SHORT).show();
                         dialog.dismiss();
